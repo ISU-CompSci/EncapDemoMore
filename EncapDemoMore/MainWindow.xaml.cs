@@ -20,6 +20,23 @@ namespace EncapDemoMore {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+
+            //Person bob = new Person();
+            //bob.FirstName = "Bob";
+            Person personWeMade = new Person("tim");
+            personWeMade.Height = 123456;
+            personWeMade.DateOfBirth = new DateTime(1992, 2, 4);
+
+            personWeMade.EyeColor = Person.Colors.Brown;
+
+            if(personWeMade.EyeColor == Person.Colors.Brown) {
+                MessageBox.Show(personWeMade.FullName 
+                    + " has brown eyes.");
+            }
+           
+
+           
+
         }
     }
 }
